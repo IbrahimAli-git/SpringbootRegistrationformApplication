@@ -18,21 +18,18 @@ public class CustomerController {
     public String home() {
         return "home";
     }
-
     @GetMapping("/register")
     public String register(Model model) {
         Customer customer = new Customer();
         model.addAttribute(customer);
         return "register";
     }
-
     @GetMapping("/customers")
     public String getCustomers(Model model) {
         List<Customer> customers = service.findAllCustomers();
         model.addAttribute("customers", customers);
         return "customers";
     }
-
     @PostMapping("/registerCustomer")
     public String registerCustomer(@ModelAttribute("customer") Customer customer) {
         System.out.println(customer);

@@ -1,4 +1,4 @@
-package com.app.entity;
+package com.app.springboot_registrationform.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

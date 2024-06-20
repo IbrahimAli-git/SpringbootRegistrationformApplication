@@ -11,48 +11,80 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <h1>Customer Registration Form</h1>
-        <br>
-        <form class="col-5" th:action="@{/registerCustomer}" th:object="${customer}" method="post">
-            <div class="mb-3">
-                <label for="input1" class="form-label"><b>Email address</b></label>
-                <input type="email" th:field="*{email_address}" class="form-control" id="input1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-                <label for="input2" class="form-label"><b>Title</b></label>
-                <input type="text" th:field="*{title}" class="form-control" id="input2" placeholder="Mr/Mrs/Ms">
-            </div>
-            <div class="mb-3">
-                <label for="input3" class="form-label"><b>First name</b></label>
-                <input type="text" th:field="*{first_name}" class="form-control" id="input3" placeholder="James">
-            </div>
-            <div class="mb-3">
-                <label for="input4" class="form-label"><b>Last name</b></label>
-                <input type="text" th:field="*{last_name}" class="form-control" id="input4" placeholder="May">
-            </div>
-            <div class="mb-3">
-                <label for="input5" class="form-label"><b>Address Line 1</b></label>
-                <input type="text" class="form-control" id="input5" placeholder="123 Main Street">
-            </div>
-            <div class="mb-3">
-                <label for="input6" class="form-label"><b>Address Line 2</b></label>
-                <input type="text" th:field="*{address_line_1}" class="form-control" id="input6" placeholder="123 Main Street">
-            </div>
-            <div class="mb-3">
-                <label for="input7" class="form-label"><b>City</b></label>
-                <input type="text" th:field="*{address_line_2}" class="form-control" id="input7" placeholder="London,Manchester, Birmingham">
-            </div>
-            <div class="mb-3">
-                <label for="input8" class="form-label"><b>Postcode</b></label>
-                <input type="text" th:field="*{postcode}" class="form-control" id="input8" placeholder="London,Manchester, Birmingham">
-            </div>
-            <div class="mb-3">
-                <label for="input9" class="form-label"><b>Phone number</b></label>
-                <input type="text" th:field="*{phone_number}" class="form-control" id="input9" placeholder=" 44-333-433-335">
-            </div>
-            <input class="btn btn-primary" type="submit" value="Submit">
-        </form>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customers.html">Customers</a>
+                </li>
+            </ul>
+        </div>
     </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <h1>Customer Registration Form</h1>
+    <br>
+    <form class="col-5" th:action="@{/registerCustomer}" th:object="${customer}" method="post">
+        <div class="mb-3">
+            <label for="input1" class="form-label"><b>Email address</b></label>
+            <input type="email" th:field="*{email_address}" class="form-control" id="input1"
+                   placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="input2" class="form-label"><b>Title</b></label>
+            <input type="text" th:field="*{title}" class="form-control" id="input2" placeholder="Mr/Mrs/Ms">
+        </div>
+        <div class="mb-3">
+            <label for="input3" class="form-label"><b>First name</b></label>
+            <input type="text" th:field="*{first_name}" class="form-control" id="input3" placeholder="James">
+        </div>
+        <div class="mb-3">
+            <label for="input4" class="form-label"><b>Last name</b></label>
+            <input type="text" th:field="*{last_name}" class="form-control" id="input4" placeholder="May">
+        </div>
+        <div class="mb-3">
+            <label for="input5" class="form-label"><b>Address Line 1</b></label>
+            <input type="text" class="form-control" id="input5" placeholder="123 Main Street">
+        </div>
+        <div class="mb-3">
+            <label for="input6" class="form-label"><b>Address Line 2</b></label>
+            <input type="text" th:field="*{address_line_1}" class="form-control" id="input6"
+                   placeholder="123 Main Street">
+        </div>
+        <div class="mb-3">
+            <label for="input7" class="form-label"><b>City</b></label>
+            <input type="text" th:field="*{address_line_2}" class="form-control" id="input7"
+                   placeholder="London,Manchester, Birmingham">
+        </div>
+        <div class="mb-3">
+            <label for="input8" class="form-label"><b>Postcode</b></label>
+            <input type="text" th:field="*{postcode}" class="form-control" id="input8"
+                   placeholder="London,Manchester, Birmingham">
+        </div>
+        <div class="mb-3">
+            <label for="input9" class="form-label"><b>Phone number</b></label>
+            <input type="text" th:field="*{phone_number}" class="form-control" id="input9"
+                   placeholder=" 44-333-433-335">
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
 </body>
 </html>

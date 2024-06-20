@@ -1,6 +1,6 @@
-package com.app.repo;
+package com.app.springboot_registrationform.repo;
 
-import com.app.entity.Customer;
+import com.app.springboot_registrationform.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

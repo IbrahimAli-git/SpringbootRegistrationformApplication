@@ -8,6 +8,6 @@ public class SpringbootRegistrationformApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootRegistrationformApplication.class, args);
-//		System.out.println("Application");
+		System.out.println("Application");
 	}
 }

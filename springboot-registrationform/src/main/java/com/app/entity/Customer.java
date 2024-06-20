@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Customer {
     @Id
     private int id;
-    private LocalDate registered;
+    private LocalDate registered = LocalDate.now();
     private String email_address;
     private String title;
     private String first_name;
@@ -26,6 +26,7 @@ public class Customer {
     private String city;
     private String postcode;
     private String phone_number;
+
 
     @Override
     public String toString() {

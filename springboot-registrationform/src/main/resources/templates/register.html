@@ -17,19 +17,19 @@
         <form class="col-5" th:action="@{/registerCustomer}" th:object="${customer}" method="post">
             <div class="mb-3">
                 <label for="input1" class="form-label"><b>Email address</b></label>
-                <input type="email" class="form-control" id="input1" placeholder="name@example.com">
+                <input type="email" th:field="*{email_address}" class="form-control" id="input1" placeholder="name@example.com">
             </div>
             <div class="mb-3">
                 <label for="input2" class="form-label"><b>Title</b></label>
-                <input type="text" class="form-control" id="input2" placeholder="Mr/Mrs/Ms">
+                <input type="text" th:field="*{title}" class="form-control" id="input2" placeholder="Mr/Mrs/Ms">
             </div>
             <div class="mb-3">
                 <label for="input3" class="form-label"><b>First name</b></label>
-                <input type="text" class="form-control" id="input3" placeholder="James">
+                <input type="text" th:field="*{first_name}" class="form-control" id="input3" placeholder="James">
             </div>
             <div class="mb-3">
                 <label for="input4" class="form-label"><b>Last name</b></label>
-                <input type="text" class="form-control" id="input4" placeholder="May">
+                <input type="text" th:field="*{last_name}" class="form-control" id="input4" placeholder="May">
             </div>
             <div class="mb-3">
                 <label for="input5" class="form-label"><b>Address Line 1</b></label>
@@ -37,15 +37,19 @@
             </div>
             <div class="mb-3">
                 <label for="input6" class="form-label"><b>Address Line 2</b></label>
-                <input type="text" class="form-control" id="input6" placeholder="123 Main Street">
+                <input type="text" th:field="*{address_line_1}" class="form-control" id="input6" placeholder="123 Main Street">
             </div>
             <div class="mb-3">
                 <label for="input7" class="form-label"><b>City</b></label>
-                <input type="text" class="form-control" id="input7" placeholder="London,Manchester, Birmingham">
+                <input type="text" th:field="*{address_line_2}" class="form-control" id="input7" placeholder="London,Manchester, Birmingham">
             </div>
             <div class="mb-3">
-                <label for="input8" class="form-label"><b>Phone number</b></label>
-                <input type="text" class="form-control" id="input8" placeholder=" 44-333-433-335">
+                <label for="input8" class="form-label"><b>Postcode</b></label>
+                <input type="text" th:field="*{postcode}" class="form-control" id="input8" placeholder="London,Manchester, Birmingham">
+            </div>
+            <div class="mb-3">
+                <label for="input9" class="form-label"><b>Phone number</b></label>
+                <input type="text" th:field="*{phone_number}" class="form-control" id="input9" placeholder=" 44-333-433-335">
             </div>
             <input class="btn btn-primary" type="submit" value="Submit">
         </form>

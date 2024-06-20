@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xlmns="https://www.thymeleaf.org/">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     <div class="container">
         <h1>Customer Registration Form</h1>
         <br>
-        <form class="col-5" >
+        <form class="col-5" th:action="@{/registerCustomer}" th:object="${customer}" method="post">
             <div class="mb-3">
                 <label for="input1" class="form-label"><b>Email address</b></label>
                 <input type="email" class="form-control" id="input1" placeholder="name@example.com">

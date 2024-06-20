@@ -14,8 +14,8 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "customers")
 public class Customer {
-    private int id;
     @Id
+    private int id;
     private LocalDate registered;
     private String email_address;
     private String title;
@@ -26,4 +26,19 @@ public class Customer {
     private String city;
     private String postcode;
     private String phone_number;
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "email_address='" + email_address + '\'' +
+                ", title='" + title + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", address_line_1='" + address_line_1 + '\'' +
+                ", address_line_2='" + address_line_2 + '\'' +
+                ", city='" + city + '\'' +
+                ", postcode='" + postcode + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                '}';
+    }
 }

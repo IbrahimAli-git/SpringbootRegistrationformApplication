@@ -13,7 +13,12 @@ A video presentation of the completed application can be viewed here: https://yo
 
 ## How to Install and Run the Project
 1. Clone the project
-2.
+2. Open the project in Intellij Idea
+3. Open the properties file, which can be found in SpringbootRegistrationformApplication/springboot-registrationform/src/main/resources, and enter in username and password for MySQL database.
+4. Open the SQL file and copy and paste it into MySQL Workbench.
+5. Navigate to SpringbootRegistrationformApplication/springboot-registrationform/src/main/java/com/app/springboot_registrationform/SpringbootRegistrationformApplication.java and run the current file.
+6. Open up a web browser and enter http://localhost:8080/home to navigate to the home page
+7. If the webpage fails to load, please wait a moment and reload the page.
 
 ## Collaborators  
 Ibrahim Ali - c0046944@hallam.shu.ac.uk  
